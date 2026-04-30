@@ -1,0 +1,25 @@
+#element-one {
+    width: 100px;
+    height: 100px;
+
+}
+.container {
+    width: 400px;
+    align-items: center;
+}
+  
+.shape {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+.text {
+    display: table;
+    margin: auto;
+    font-size: 50px;
+    font-family: sans-serif;
+    line-height: 100px;
+  }
