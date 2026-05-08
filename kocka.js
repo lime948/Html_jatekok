@@ -10,6 +10,8 @@ function Randomszam(min, max) {
 forgatas.onclick = function() {
     let jatekos1 = Randomszam(1, 7);
     let jatekos2 = Randomszam(1, 7);
+    /*let img = document.createElement('img');
+    img.src = 'kocka.png'*/
     document.querySelector("#kocka1 .text").textContent = jatekos1
     document.querySelector("#kocka2 .text").textContent = jatekos2
     if (jatekos1 > jatekos2) {

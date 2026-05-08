@@ -7,7 +7,8 @@ let score = 0;
 let currentMole = null;
 let timer = null;
 
-// Vakond mozgatása
+stopBtn.classList.add("hidden")
+
 function randomMole() {
   holes.forEach(hole => hole.classList.remove("mole"));
 
@@ -16,7 +17,6 @@ function randomMole() {
   currentMole = holes[randomIndex].id;
 }
 
-// Kattintás
 holes.forEach(hole => {
   hole.addEventListener("click", () => {
     if (hole.id === currentMole && timer !== null) {
@@ -27,9 +27,10 @@ holes.forEach(hole => {
   });
 });
 
-// START gomb
 startBtn.addEventListener("click", () => {
-  if (timer !== null) return; // már fut
+  if (timer !== null) return;
+  startBtn.classList.add("hidden")
+  stopBtn.classList.remove("hidden")
   
   score = 0;
   scoreDisplay.textContent = score;
@@ -37,10 +38,11 @@ startBtn.addEventListener("click", () => {
   timer = setInterval(randomMole, 800);
 });
 
-// STOP gomb
 stopBtn.addEventListener("click", () => {
   clearInterval(timer);
   timer = null;
+  startBtn.classList.remove("hidden")
+  stopBtn.classList.add("hidden")
 
   holes.forEach(hole => hole.classList.remove("mole"));
   currentMole = null;
