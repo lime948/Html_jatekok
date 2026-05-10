@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="kocka.css">
     <title>Kocka Párbaj</title>
 </head>
+
 <body>
+
     <div class="container">
-        <div class="shape" id="kocka1">
-            <span class="text">
-            </span>
+
+        <h1>KOCKAPÁRBAJ</h1>
+
+        <div class="kockak">
+
+            <div class="jatekos-box">
+                <p class="jatekos">Játékos 1</p>
+                <img src="d1.PNG" id="kocka1" class="kocka-kep kockak">
+            </div>
+
+            <div class="jatekos-box">
+                <p class="jatekos">Játékos 2</p>
+                <img src="d2.PNG" id="kocka2" class="kocka-kep kockak">
+            </div>
+
         </div>
-        <button id="roll">A</button>
-        <div class="shape" id="kocka2">
-            <span class="text">
-            </span>
-        </div>
-        <div id="nyertes">
-            <span class="text">
-                
-            </span>
-        </div>
+
+        <button id="roll">Forgatás</button>
+
+        <div id="nyertes"></div>
+
     </div>
-    
+
+    <script src="kocka.js"></script>
+
 </body>
-<script src="kocka.js"></script>
 </html>

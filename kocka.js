@@ -1,24 +1,24 @@
-let kocka1 = document.getElementById("kocka1")
-let kocka2 = document.getElementById("kocka2")
-let forgatas = document.getElementById("roll")
-let nyertes = document.getElementById("nyertes")
+const gomb = document.getElementById("roll");
+const kocka1 = document.getElementById("kocka1");
+const kocka2 = document.getElementById("kocka2");
+const nyertes = document.getElementById("nyertes");
 
-function Randomszam(min, max) {
-    return Math.floor(Math.random() * (max - min) + min)
-}
+gomb.addEventListener("click", function () {
 
-forgatas.onclick = function() {
-    let jatekos1 = Randomszam(1, 7);
-    let jatekos2 = Randomszam(1, 7);
-    /*let img = document.createElement('img');
-    img.src = 'kocka.png'*/
-    document.querySelector("#kocka1 .text").textContent = jatekos1
-    document.querySelector("#kocka2 .text").textContent = jatekos2
-    if (jatekos1 > jatekos2) {
-        document.querySelector("#nyertes .text").textContent = "A"
-    } else if (jatekos2 > jatekos1) {
-        document.querySelector("#nyertes .text").textContent = "B"
-    } else {
-        document.querySelector("#nyertes .text").textContent = "C"
+    let szam1 = Math.floor(Math.random() * 6) + 1;
+    let szam2 = Math.floor(Math.random() * 6) + 1;
+
+    kocka1.src = "d" + szam1 + ".PNG";
+    kocka2.src = "d" + szam2 + ".PNG";
+
+    if (szam1 > szam2) {
+        nyertes.innerHTML = "Játékos 1 nyert!";
     }
-}
+    else if (szam2 > szam1) {
+        nyertes.innerHTML = "Játékos 2 nyert!";
+    }
+    else {
+        nyertes.innerHTML = "Döntetlen!";
+    }
+
+});
